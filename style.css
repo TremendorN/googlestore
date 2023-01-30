@@ -1,0 +1,297 @@
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-family: 'Roboto', sans-serif;
+  /* max-width: 1280px; */
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+a{
+  text-decoration: none;
+  color: black;
+}
+a:hover {
+  text-decoration: underline;
+}
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+
+.container{
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+/* Navbar  */
+nav {
+    height: 3.5em;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+nav > ul {
+    display: flex;
+    
+}
+ul > li {
+    list-style-type: none;
+    margin-right: 1.25em;
+    
+    
+}
+
+/* Main img */
+
+.main-img{
+  background-image: url('./img/main-img.jpeg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 37.5em;
+  padding-top: 10.25rem;
+  
+  
+  
+}
+.text-content {
+  margin-left: 8rem;
+  width: 22rem;
+  
+}
+h1 {
+  letter-spacing: 2px;
+  font-size: 3.5rem;
+}
+p {
+  font-size: 1rem;
+  display: block;
+}
+.small-text{
+  font-size: 0.75rem;
+  color: #3C4043;
+}
+.button{
+  font-size: 1rem;
+  border: 2px solid #3C4043;
+  border-radius: 5px;
+  padding: 0.5em 1em;
+  margin-top: 1.3em;
+  display: inline-block;
+}
+.simple {
+  border: none;
+}
+
+
+/* Gadgets */
+
+.gadgets {
+  height: 35em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding-bottom: 20px;
+}
+.device-container{
+  display: flex;
+  gap: 1.5em;
+}
+.device{
+  width: 11.4rem;
+  height: 15.8rem;
+  background: #F8F9FA;
+  border-radius: 20px;
+}
+.device > p {
+  margin-top: 3rem;
+  margin-left: 3rem;
+}
+hr{
+  display:block;
+  width: 96%;               
+  background-color:#FFFF00;
+  height: 1px;
+}
+/* NBA SECTION  */
+
+.img-text-section{
+  display: flex;
+  
+}
+.img-text-section > img {
+  width: 44.1rem;
+}
+.text-about {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+  padding: 12rem 11.5rem 0 7.3rem;
+  background-color: #F8F9FA;
+  align-items: flex-start;
+}
+h3 {
+  font-size: 2rem;
+}
+
+/* PLATES */
+.plates {
+  display: flex;
+  /* justify-content: space-between; */
+  margin-bottom: 1.5rem;
+  gap: 2rem;
+}
+.small-plate{
+  padding-top: 1.1rem;
+  width: 27.6rem;
+  height: 44.4rem;
+  background-color: #E9E3DB;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  border-radius: 28px;
+}
+h2 {
+  font-size: 2.5rem;
+  /* padding: 0 1.8rem; */
+}
+.small-btn {
+  margin-top: 0.3rem;
+  border: 2px solid #5F6368;
+  border-radius: 4px;
+  padding: 0 1rem;
+}
+.big-plate{
+  width: 42.3rem;
+  height: 46.8rem;
+  background-color: #D6E2DB;
+  border-radius: 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 2.5rem;
+  
+}
+/* COLORS ON BIG PLATES  */
+.man{
+  background-color: #EFDDCD;
+}
+.watch {
+  background-color: #F3F2F1;
+}
+.buds{
+  background-color: #E7EBEE;
+}
+/* /// */
+.category-plate{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+
+/* FOOTER  */
+footer{
+  padding: 0 6rem;
+}
+.footer-top-section{
+  display: flex;
+  flex-direction: row-reverse;
+}
+.footer-top-section > ul > li {
+  margin: 1.5rem 3.4rem;
+}
+.footer-top-list{
+  font-size: 0.875rem;
+  color: #3C4043;
+  
+  
+}
+.footer-bottom-section{
+  display: flex;
+  justify-content: space-between;
+  padding-right: 1rem;
+}
+.footer-bottom-section > ul {
+  display: flex;
+}
+.footer-bottom-list{
+  color:#423F3F ;
+  font-size: 0.68rem;
+  margin-left: 2.5rem;
+}
